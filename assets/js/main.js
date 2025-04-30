@@ -93,39 +93,8 @@ function myMenuFunction() {
       }
     });
   }
-  
-  /* ----- CONTACT FORM TO GOOGLE SHEET ----- */
-  const scriptURL =
-    "https://script.google.com/macros/s/AKfycbySNQ_6zDflX7HoFLcQ9A8MC8uZ3kJcwF-rMLDaNWrcMTdSFMfgk0NHK0zLmj8d8Pd6/exec";
-  const form = document.forms["submit-to-google-sheet"];
-  
-  form.addEventListener("submit", (e) => {
-    e.preventDefault();
-    fetch(scriptURL, { method: "POST", body: new FormData(form) })
-      .then((response) => {
-        alert("Message sent successfully!");
-        form.reset();
-      })
-      .catch((error) => {
-        alert("Something went wrong. Please try again.");
-        console.error("Error!", error.message);
-      });
-  });
- 
-  function doPost(e) {
-    var sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
-    
-    // Log the incoming parameters for debugging
-    Logger.log(JSON.stringify(e.parameter));
-    
-    // Ensure the parameters match the form field names exactly
-    var name = e.parameter.Name;
-    var email = e.parameter.Email;
-    var message = e.parameter.Message;
-    
-    // Append the data to the sheet
-    sheet.appendRow([new Date(), name, email, message]);
-    
-    return ContentService.createTextOutput("Success").setMimeType(ContentService.MimeType.TEXT);
-  }
-  
+  srLeft.reveal(".experience-education-box", { delay: 100 });
+
+  const link = document.querySelector(`.nav-menu a[href*="${sectionId}"]`);
+
+
