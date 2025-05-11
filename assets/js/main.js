@@ -31,7 +31,7 @@ function myMenuFunction() {
   
   /* ----- TYPING EFFECT ----- */
   var typingEffect = new Typed(".typedText", {
-    strings: ["Developer"],
+    strings: ["Developer","Front Developer", "Designer"],
     loop: true,
     typeSpeed: 100,
     backSpeed: 80,
@@ -96,5 +96,5 @@ function myMenuFunction() {
   srLeft.reveal(".experience-education-box", { delay: 100 });
 
   const link = document.querySelector(`.nav-menu a[href*="${sectionId}"]`);
-
-
+  
+  
